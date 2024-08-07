@@ -15,7 +15,7 @@ message.value = formData.message;
 form.addEventListener("input", onInput)
 
 function onInput (evt) {
-formData[evt.target.name] = evt.target.value;
+formData[evt.target.name] = evt.target.value.trim();
 
 
 localStorage.setItem(LS_KEY, JSON.stringify(formData))
